@@ -1,0 +1,39 @@
+.big-container{
+    padding:50px;
+
+}
+.details-b{
+    margin-top:20px;
+    display:flex;
+
+
+}
+.detail-flag{
+    width:50%;
+   
+}
+.detail-flag > img{
+    width:100%;
+    height:100%;
+
+}
+.country-detail{
+    margin-left:20px;
+}
+.big-detail-body{
+    height:100vh;
+}
+
+@media only screen and (max-width:767px)
+{
+    .details-b{
+        display:block;
+    }
+    .detail-flag{
+        width:100%;
+
+    }
+    .country-detail{
+        margin-left:0;
+    }
+}
