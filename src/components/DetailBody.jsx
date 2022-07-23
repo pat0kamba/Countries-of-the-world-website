@@ -6,7 +6,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import "../styles/Detail.css";
 
 export default function DetailBody({Name,currencies,language,region,sub_region,population,flag, borders})
-{ 
+{
     const navigate = useNavigate();
     //TODO receive Data from the country component
     const lan = [];
@@ -42,8 +42,8 @@ export default function DetailBody({Name,currencies,language,region,sub_region,p
 
     // console.log(cap)
 
-    const capital = useSelector((state)=>state.country.capital); 
-    
+    const capital = useSelector((state)=>state.country.capital);
+
 
     function goBack()
     {
@@ -53,7 +53,7 @@ export default function DetailBody({Name,currencies,language,region,sub_region,p
     function showDetail()
     {
         navigate('/detail');
-        
+
     }
     return (
         <div className="big-container ">
@@ -88,14 +88,14 @@ export default function DetailBody({Name,currencies,language,region,sub_region,p
                             <span key={id}>{item} | </span>
                         )
                     })
-                } 
+                }
                 </div>
                 </div>
                 <br />
                { borders && <span>Border Countries: </span> }
-                {borders && borders.map((item, id)=>{return (<Button variant="contained" color="secondary" sx={{ml:"5px"}} onClick={showDetail} key={id}> {item}</Button>)})}
+                {borders && borders.map((item, id)=>{return (<Button variant="outlined" color="secondary" sx={{m:"5px"}} onClick={showDetail} key={id}> {item}</Button>)})}
             </div>
         </div>
         </div>
     )
-} 
+}

@@ -2,7 +2,7 @@ import {createSlice} from "@reduxjs/toolkit";
 
 const countrySlice = createSlice({
     name:"country",
-    initialState:{data:[], name:'Fiji', capital:'', mode:{backgroundColor:'', color:''}},
+    initialState:{data:[], name:'Fiji', capital:'', mode:{backgroundColor:'', color:''}, Mode:true, Filter:""},
     reducers:{
         changeCountry(state,action)
         {
@@ -23,6 +23,15 @@ const countrySlice = createSlice({
         {
             state.mode.backgroundColor=action.payload.bg;
             state.mode.color=action.payload.color;
+        },
+        setMode(state)
+        {
+          state.Mode = !state.Mode;
+        },
+        setFilter(state, action)
+        {
+          let value = action.payload;
+          state.Filter = value;
         }
 
 

@@ -10,7 +10,7 @@
 }
 .detail-flag{
     width:50%;
-   
+
 }
 .detail-flag > img{
     width:100%;
@@ -21,7 +21,7 @@
     margin-left:20px;
 }
 .big-detail-body{
-    height:100vh;
+    min-height:100vh;
 }
 
 @media only screen and (max-width:767px)

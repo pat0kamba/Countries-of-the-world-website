@@ -2,15 +2,15 @@ import React from "react";
 import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
 import NightlightIcon from '@mui/icons-material/Nightlight';
 import {countryActions} from './countrySlice.js';
-import {useDispatch} from 'react-redux';
-import {useState} from "react";
+import {useDispatch, useSelector} from 'react-redux';
+
 
 import "../styles/Navbar.css";
 export default function Navbar(){
     const dispatch = useDispatch();
-
+    const Mode = useSelector((state)=>state.country.Mode);
     // change Mode into a global state with Redux
-    const [Mode, setMode] = useState(true);
+    // const [Mode, setMode] = useState(true);
     const switchMode = document.getElementById('change-mode');
     function changeMode()
     {
@@ -19,9 +19,10 @@ export default function Navbar(){
             dispatch(countryActions.changeBgColor({
                 bg:"#fff",
                 color:"#333"
-            }))
-            setMode(true)
-           
+            }));
+            dispatch(countryActions.setMode())
+
+
 
         }else{
             console.log('dark mode off');
@@ -29,12 +30,12 @@ export default function Navbar(){
                 bg:"#212c37",
                 color:"#fff"
             }))
-            setMode(false);
+            dispatch(countryActions.setMode());
         }
-        
-        
+
+
     }
-   
+
     return(
         <div className="navbar">
         <div className="nav-title">
@@ -42,7 +43,7 @@ export default function Navbar(){
         </div>
         <div className="mode">
         <input id="change-mode" type="checkbox" style={{display:"none"}} />
-        <label htmlFor="change-mode" className="modeIcon" onClick={changeMode}>  {Mode?<DarkModeOutlinedIcon/> : <NightlightIcon />}</label>
+        <label htmlFor="change-mode" className="modeIcon" onClick={changeMode}>  {Mode?<DarkModeOutlinedIcon/>:<NightlightIcon />}</label>
         {Mode?<p>Dark Mode </p>: <p>Light Mode</p>}
         </div>
         </div>

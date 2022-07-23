@@ -5,7 +5,7 @@ import {countryActions} from "./countrySlice.js";
 import {useState} from "react";
 import {useNavigate} from "react-router-dom";
 import "../styles/InputCountry.css";
- 
+
 export default function InputCountry()
 {   const [country, setCountry] = useState('');
     const dispatch = useDispatch();
@@ -16,9 +16,10 @@ export default function InputCountry()
     {
         const value = e.target.value;
         setCountry(value);
+        dispatch(countryActions.setFilter(value))
     }
     function searchCountry()
-    {   
+    {
         const Url = `https://restcountries.com/v3.1/name/${country.toLowerCase()}?fullText=true`;
         fetchCountry(Url);
         console.log(Url);
@@ -27,16 +28,16 @@ export default function InputCountry()
 
     }
 
-   
+
     function fetchCountry(url)
     {
         fetch(url)
         .then((response)=>response.json())
         .then((data)=>{console.log(data[0]); dispatch(countryActions.changeCountry(data[0]))});
-        
+
     }
 
-    return( 
+    return(
         <div className="input-country" >
             {/* search icon from material UI */}
             <SearchIcon onClick={searchCountry} className="search-btn"/>
