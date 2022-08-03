@@ -37,8 +37,26 @@ ________________
 
 ## Pictures
 ___________
+## Mobile
+__________
+![](Screen%20Shot%20country%20mobile1.png)
+![](Screen%20Shot%20country%20mobile2.png)
+![](Screen%20Shot%20country%20mobile3.png)
 
+## Tablet
+__________
 
+![](Screen%20Shot%20country%20tablet1.png)
+
+## desktop
+____________
+
+![](Screen%20Shot%20country%20desktop1.png)
+![](Screen%20Shot%20country%20desktop2.png)
+![](Screen%20Shot%20country%20desktop3.png)
+
+## Deployment
+_______________
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
