@@ -57,6 +57,10 @@ ____________
 
 ## Deployment
 _______________
+
+This project is hosted on Firebase: https://countries-in-the-world-8180d.web.app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
