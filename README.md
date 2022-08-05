@@ -58,7 +58,7 @@ ____________
 ## Deployment
 _______________
 
-This project is hosted on Firebase: https://countries-in-the-world-8180d.web.app
+This project is hosted on Firebase: https://countries-in-the-world-8180d.web.app/
 
 
 # Getting Started with Create React App
